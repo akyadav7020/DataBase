@@ -28,7 +28,7 @@ def get_id_of_videos(home_link,count):
         else:
             return v
     except Exception as e:
-        return "Something Wrong"
+        return e
 
 def title_of_channel(home_link):
     """ returns channene name and unique channel_url_id for a particulal channel link"""
@@ -42,7 +42,7 @@ def title_of_channel(home_link):
         ch_url=ch_url.split("/")[-1]
         return ch_name,ch_url
     except Exception as e:
-        return "Something Wrong"
+        return e
 
 def Total_Views(id):
     """ returns Total Views on a particular Video"""
@@ -53,7 +53,7 @@ def Total_Views(id):
         views = html_result.find("meta",itemprop="interactionCount")['content']
         return int(views)
     except Exception as e:
-        return "Retry"
+        return "try again"
 
 def Total_Likes(id):
     try:

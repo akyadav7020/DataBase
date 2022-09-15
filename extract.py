@@ -13,7 +13,7 @@ def youtubescraper(id):
         thumbnail_url = video.thumbnail_url
         return(link,title,thumbnail_url)
     except Exception as e:
-        return "Somthing Went Wrong"
+        return e
 
 
 def get_id_of_videos(home_link):
@@ -23,7 +23,7 @@ def get_id_of_videos(home_link):
         v = re.findall(r"watch\?v=(\S{11})", html_result)
         return (v)
     except Exception as e:
-        return "Somthing Went Wrong"
+        return e
 
 
 

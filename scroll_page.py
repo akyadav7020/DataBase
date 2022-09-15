@@ -23,4 +23,4 @@ def Scroll_Page(link,i):
         html = driver.page_source
         return html
     except Exception as e:
-        return "Something Wrong"
+        return e
