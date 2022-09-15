@@ -22,10 +22,10 @@ def main():
         if request.method == 'POST':
             ch_link = request.form['content']
             count = int(request.form['num'])
-            details = ["a","b"]
+            details = []
             ch_name="abhy"
             #video_id = vd.get_id_of_videos(ch_link, count)
-            data1=[{"V_link":video_id,"Likes":100,"Title":"title1","thumbnail":"thumbnail_url1","Views":500}]
+            data1=[{"V_link":ch_link,"Likes":100,"Title":"title1","thumbnail":"thumbnail_url1","Views":500}]
             """video_id = vd.get_id_of_videos(ch_link,count)
             if (len(video_id)) == 0:
                 return "Invalid Link Try again"
