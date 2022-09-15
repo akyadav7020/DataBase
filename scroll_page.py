@@ -7,13 +7,15 @@ Woking fine in local but after deploying no responce, so only checking for 1st p
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
+from webdriver_manager.chrome import ChromeDriverManager
 import time
 
 def Scroll_Page(link,i):
     try:
+
         option = Options()
         option.headless = True
-        driver = webdriver.Chrome(r'chromedriver.exe', options=option)
+        driver = webdriver.Chrome(ChromeDriverManager().install(), options=option)
         driver.get(link)
         time.sleep(5)
         for k in range(i):

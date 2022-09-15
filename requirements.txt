@@ -18,6 +18,7 @@ urllib3
 Werkzeug==1.0.1
 pyodbc==4.0.34
 selenium
+webdriver_manager
 
 
 
